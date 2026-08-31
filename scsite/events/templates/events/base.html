@@ -1,0 +1,26 @@
+{% load events_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/blog.css" %}" rel="stylesheet">
+</head>
+<body>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div id="sidebar">
+    <h2>My Events</h2>
+
+    <h3>Latest Events</h3>
+            {% show_events_slider 3 %}
+
+      {% show_latest_events 3 %}
+    <p> There are currently {% total_events %} events.</p>
+  </div>
+
+</body>
+</html>

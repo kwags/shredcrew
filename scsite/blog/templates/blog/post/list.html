@@ -1,0 +1,49 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block title %}My Blog{% endblock %}
+{% block content %}
+
+    <!-- Hero Image -->
+    <div class="hero-img">
+        <img src="{% static 'images/hero-blog.jpg' %}" alt="Mountain Biker in the Forest with teal jacket">
+    </div>
+
+    <!-- Page Content -->
+    <div class="offwhite-bg">
+        <h1>Shred Crew Blog</h1>
+            <p>We know the best way to improve your riding is to get out on the trails more. But when you can't sneak in a ride, you can still learn about mountain biking skills and apply those next time you hit the trails. Check out our blog posts for some key advice on riding skills to up your stoke on your next ride!</p>
+    </div>
+
+    <!--Post Tags -->
+    {% if tag %}
+        <div class="tags">
+            <h2>Posts tagged with "{{ tag.name }}"</h2>
+            <a href="{% url 'blog' %}">Back to All Posts</a>
+        </div>
+    {% endif %}
+
+    {% for post in posts %}
+        <div class="list_card">
+            <!--Post Image -->
+            {% if post.header_image %}
+                <div class="image">
+                    <img src="{{ post.header_image.url }}" alt="mountain biker" class="post-image">
+                </div>
+            {% endif %}
+
+            <!-- Post Info -->
+            <div class="list_info">
+                <a href="{{ post.get_absolute_url }}"><h1>{{ post.title }}</h1></a>
+                <p class="tag_list"> Tags: {% for tag in post.tags.all %}<a href="{% url "blog:post_list_by_tag" tag.slug %}">{{ tag.name }}</a>
+                {% if not forloop.last %}, {% endif %}
+                {% endfor %}
+                </p>
+                <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
+
+                {{ post.body|truncatechars:150|linebreaks }}<br>
+                <div class="view_details"><a href="{{ post.get_absolute_url }}">View Post</a></div>
+            </div>
+        </div>
+    {% endfor %}
+    {% include "pagination.html" with page=posts %}
+{% endblock %}

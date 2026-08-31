@@ -1,0 +1,38 @@
+<div class="body-container">
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+            {% for event in events_slider %}
+                <div class="card swiper-slide">
+
+                    <div class="image-content">
+                        <div class="card-image">
+
+                        {% if event.event_image %}
+                        <!--Event Image -->
+                        <img src = "{{ event.event_image.url }}" alt="mountain biker" class="card-image">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <!--Event Details -->
+                        <h3 class="name"> <a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
+                        <h2 class="event-date">{{ event.date }}</h2>
+                        <p class="location"><b>Location: </b>{{ event.location }}</p>
+                        <p class="description">{{ event.description|truncatechars:150 }}</p>
+                        <a href="{{ event.get_absolute_url }}"><button class="viewevent-btn">View Event</button></a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        <!--Swiper Buttons -->
+        <div class="swiper-button-next swiper-nav-btn"></div>
+        <div class="swiper-button-prev swiper-nav-btn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+
+
+

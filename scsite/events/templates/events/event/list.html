@@ -1,0 +1,67 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block title %}My Events{% endblock %}
+{% block content %}
+
+
+<div class="hero-img">
+    <img src="{% static 'images/hero-events.jpg' %}" alt="Mountain Biker in the Forest with teal jacket">
+</div>
+
+<div class="offwhite-bg">
+    <h1>Shred Crew Events</h1>
+    <p class="mobile">The Shred Crew offers skills clinics, also known as our Shred School, and group rides, also known as Shred Rides, to take your shredding to the next level! Let’s shred, Crew!</p>
+    <p class="tablet-desktop">Shred Crew skills clinics, also known as our Shred School, are all about transforming your ride to the next level. We’ll help you push your limits in a safe learning environment where you’ll receive coaching from BICP-certified mountain bike coaches. We offer many different skills clinics from beginner foundational skills to advanced jump clinics, there will be something every rider can learn from and ride away with more skills to shred the trails.
+    </p>
+    <p class="tablet-desktop">
+    Our weekly Shred Rides, are mountain bike group rides that offer something for everyone in the Minneapolis metro area from beginner green trails to an experience ride down rocky terrain and over gap jumps. Each week, we meet at the trailhead and split into three groups (beginner, intermediate, and advanced). Each group will ride the trails appropriate for their skill level lead by one of our BICP-certified mountain bike coaches. Our group rides help build camaraderie and skills on the trail to improve confidence and community. And we’ll probably all grab some tacos or beer afterward!
+    </p>
+</div>
+
+
+
+    <!--Event Tags -->
+    {% if tag %}
+        <div class="tags">
+            <h2>{{ tag.name }} Events</h2>
+            <a href="{% url 'events' %}">Back to All Events</a>
+        </div>
+    {% endif %}
+
+    {% for event in events %}
+
+    <div class="list_card">
+        <!--Event Image -->
+        {% if event.event_image %}
+            <div class="image">
+                <a href="{{ event.get_absolute_url }}"><img src="{{ event.event_image.url }}"  alt="mountain biker" class="event-image"></a>
+            </div>
+        {% endif %}
+
+        <!--Event info -->
+        <div class="list_info">
+            <a href="{{ event.get_absolute_url }}"><h1>{{ event.title }} </h1></a>
+            <h2> {{ event.date|date:"l" }}, {{ event.date }}</h2>
+            <p><b>Time: </b> {{ event.start_time }} – {{ event.end_time }}</p>
+            <p><b>Location: </b> <a href="{{ event.location.directions }}" target="_blank"> {{ event.location }}</a></p>
+            <p><b>Skill Level: </b>{{ event.skill_level }}</p>
+            <p> <b>Description: </b>
+                {{ event.description|truncatechars:150 }}
+            </p>
+            <p class="tag_list">
+              <b>Tags:</b>
+              {% for tag in event.tags.all %}
+                <a href="{% url "events:event_list_by_tag" tag.slug %}">
+                  {{ tag.name }}
+                </a>
+                {% if not forloop.last %}, {% endif %}
+              {% endfor %}
+           </p><br>
+            <div class="view_details">
+             <a href="{{ event.get_absolute_url }}">View Event Details</a>
+            </div>
+       </div>
+    </div>
+  {% endfor %}
+  {% include "pagination.html" with page=events %}
+{% endblock %}

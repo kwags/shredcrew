@@ -1,0 +1,16 @@
+
+{% for message in messages %}
+{{ message }}
+{% endfor %}
+
+<div class="newsletter" id="subscribe">
+    <h2>Subscribe to our Newsletter</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Email</label><br>
+            <input type="text" name="Subscriber">
+            <input type="submit" value="Send it!">
+    </form>
+</div>
+
+

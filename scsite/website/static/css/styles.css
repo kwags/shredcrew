@@ -1,0 +1,771 @@
+/*
+Name: Kayla Wagner
+File Name: styles.css
+Date: 10 August 2023
+*/
+
+/* CSS Reset */
+body, header, nav, nav, main, footer, h1, h2, div, img, ul, section, article, {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
+/* Style rule for box sizing applies to all elements */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rules for header */
+header {
+    top: 0;
+    height: 190px;
+}
+
+header img {
+    margin: 0 auto;
+}
+
+/* Show mobile class, hide tablet-desktop class and menu-link id */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop, #menu-links {
+    display: none;
+}
+
+/* Style rules for hamburger menu */
+.mobile-nav a {
+    color: #DBFD87;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    display: block;
+}
+
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    left: 2%;
+    top: 0;
+    color: #DBFD87;
+}
+
+.mobile-nav {
+    margin: auto;
+    display: block;
+}
+
+.active {
+    color: #03B5AA;
+}
+
+/* Style Rules for Navbar */
+.navbar {
+    width: 100%;
+    background-color: #363457;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.85);
+}
+
+#shred-logo {
+    margin-left: 40%;
+    margin-right: auto;
+    display: block;
+}
+
+.navbar-brand {
+    height: 100%;
+    width: 25%;
+    background: #DBFD87;
+    transform-origin: 100% 0%;
+    transform: skew(-30deg, 0deg);
+}
+
+.navbar-brand img {
+    padding: 2%;
+    margin: auto;
+    transform: skew(30deg, 0deg);
+}
+
+/* Style rules for hero text */
+.hero-img {
+    display: block;
+}
+
+.hero-text {
+  position: relative;
+  text-align: left;
+  position: absolute;
+  top:  125px;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    text-transform: none;
+}
+
+/* Style Rules for Buttons */
+button {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    color: #DBFD87;
+    padding: 1% 6%;
+    background: #03B5AA;
+    border-radius: 3px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    color: #363457;
+    background-color: #DBFD87;
+}
+
+.hero-btn {
+    padding: 5% 25%;
+    margin-top: 10%;
+    margin-left: 0;
+}
+
+.event-btn {
+    margin: 2% 0%;
+}
+
+
+/* Style rules for main content */
+
+main {
+    background-color: #fffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #03B5AA;
+}
+
+h2 {
+    color: #363457;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #03B5AA;
+    padding-top: 1%;
+}
+
+h4 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: #225444;
+    font-weight: normal;
+    letter-spacing: .1em;
+}
+
+main p {
+    color: #7F7F7F;
+}
+
+main p a {
+    color:#03B5AA;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+a {
+    color:#03B5AA;
+    text-decoration:none;
+}
+
+
+.offwhite-bg {
+    background-color:#F4F3EF;
+    padding: 2%;
+}
+
+.center-text {
+    color: #03B5AA;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    padding-bottom: 2%;
+}
+
+.upcoming_events {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.latest_blog {
+    padding: 0% 2% 1% 2%;
+}
+
+/* Style Rules for List Display Cards */
+
+.tags {
+    padding: 2%;
+}
+
+.list_card{
+    padding: 2%;
+    width: 100%;
+}
+
+.offwhite-list_card{
+    background-color:#F4F3EF;
+}
+
+.list_card:nth-child(even){
+    background-color:#F4F3EF;
+}
+
+
+.list_card:hover {
+    background-color: rgba(219,253,135,.5);
+}
+
+.list_info h1 {
+    line-height: 1.25em;
+    padding-top: 1%;
+}
+
+.event-image {
+  object-fit: cover;
+  object-position: right top;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.post-image {
+  object-fit: cover;
+  object-position: right top;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.view_details {
+    font-weight: 700;
+}
+
+.view_details a:hover {
+    color: #363457;
+}
+
+.list_info {
+    width: 100%;
+    overflow: auto;
+    margin: auto;
+}
+
+.list_info h1 {
+    font-size: 24px;
+}
+
+.list_info h2 {
+    font-size: 20px;
+}
+
+/* Style Rules for Detail Display*/
+
+.detail_card {
+    padding: 2%;
+    background-color:#F4F3EF;
+    width: 100%;
+}
+
+.event_detail_image {
+  object-fit: cover;
+  object-position: right top;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.detail_info {
+    width: 100%;
+    padding: 0% 0%;
+    overflow: auto;
+    margin: auto;
+}
+
+.detail_info h1 {
+    font-size: 24px;
+}
+
+.detail_info h2 {
+    font-size: 20px;
+}
+
+.detail_description {
+    padding: 2%;
+    background-color:#F4F3EF;
+}
+
+.other_detail {
+    padding: 2%;
+}
+
+.similar-events {
+
+}
+
+.blog-detail {
+    padding: 2%;
+}
+
+.blog_title{
+    text-align: center;
+}
+
+.blog_title h1 {
+    padding: 6% 2% 2% 1%;
+    line-height: 1.2em;
+}
+
+.blog_detail_image img {
+    padding: 2%;
+}
+
+.newsletter {
+    background-color:#03B5AA;
+    padding: 1% 0%;
+    overflow: auto;
+}
+
+.newsletter h2 {
+    text-align: center;
+    color: #DBFD87;
+    font-size: 1.75em;
+}
+
+.newsletter form label {
+    color: #fff;
+}
+
+.newsletter form {
+        display: grid;
+        grid-template-columns: auto  auto;
+        grid-gap: 0px;
+        margin: auto;
+        max-width: 600px;
+        padding: 2%;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75em;
+    color: #225444;
+    background-color:#363457;
+    color: #F4F3EF;
+    padding: 3%;
+}
+
+.social img {
+    display: inline-block;
+    padding: 4%;
+}
+
+p.date {
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+    padding: 1% 0%;
+}
+
+/* pagination */
+.pagination {
+    margin:40px 0;
+    color: #7F7F7F;
+    text-align: center;
+}
+
+/* Style Rules for forms */
+label {
+    clear:both;
+    margin-bottom:4px;
+    text-align: left;
+
+}
+
+.contact {
+    padding: 2%;
+    text-align: center;
+}
+
+input, textarea {
+    clear:both;
+    margin:0 0 10px;
+    background:#ededed;
+    border:0;
+    padding: 3px 10px;
+    max-width: 100%
+}
+
+input[type=submit] {
+    font-weight:bold;
+    background:#03B5AA;
+    color:#DBFD87;
+    padding:10px 60px;
+    font-size:14px;
+    text-transform:uppercase;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+input[type=submit]:hover {
+    font-weight:bold;
+    background:#DBFD87;
+    color:#363457;
+}
+
+.newsletter input {
+    padding:0px 20px;
+}
+
+.newsletter input[type=submit] {
+    background:#DBFD87;
+    color:#363457;
+    padding:10px 20px;
+    font-size:14px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.newsletter input[type=submit]:hover {
+    background:#363457;
+    color:#DBFD87;
+}
+
+.errorlist {
+    color:#cc0033;
+    float:left;
+    clear:both;
+    padding-left:10px;
+}
+
+/* Style Rules for Comments */
+.comment {
+    padding:10px;
+}
+.comment:nth-child(even) {
+    background: #F4F3EF;
+}
+.comment .info {
+    font-weight:bold;
+    font-size:12px;
+    color:#666;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 640px), print {
+
+/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile, .mobile-nav {
+        display: none;
+    }
+
+    /* Tablet Viewport: Style rule for header */
+    header {
+        padding-bottom: 2%;
+    }
+
+    /* Tablet Viewport: Style rules for nav area */
+    nav {
+        width: 75%;
+    }
+
+    nav ul {
+        list-style-type: none;
+        text-align: right;
+    }
+
+    nav li {
+        font-size: 1.5em;
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+        border-right: 1px solid #DBFD87;
+    }
+
+    nav li:last-child {
+        padding-right: 5%;
+        border: none;
+    }
+
+    nav li a {
+        text-align: right;
+        padding: 0.1em 0.75em;
+        display: block;
+        color: #DBFD87;
+        text-decoration: none;
+    }
+
+    .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        width: 20%;
+    }
+
+    #shred-logo {
+        margin: 0;
+        padding-left: 5%;
+    }
+
+    #shred-logo img {
+        margin: 0;
+        height: 80px;
+        width: auto;
+    }
+
+    /* Tablet Viewport: Style Rules for Hero Text */
+    .hero-text {
+      position: relative;
+      height: 50%;
+      text-align: left;
+      position: absolute;
+      top: 40%;
+      left: 150px;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    .hero-text h1 {
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+        font-size: 2.5em;
+        outline: none;
+        text-transform: none;
+    }
+
+    /* Tablet Viewport: Style Rules for List Display */
+    .image {
+      width: 800px;
+      height: 400px;
+    }
+
+    .post-image {
+      width: 800px;
+      height: 400px;
+      object-position: center;
+    }
+
+    .list_image img {
+        width: 300px;
+        height: auto;
+        float: left;
+        display: flex;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .list_info {
+            padding: 2%;
+    }
+
+    .list_info a{
+        font-size: .9em;
+    }
+
+    .list_card {
+        display: flex;
+    }
+
+    /* Tablet Viewport: Style Rules for Detail Display */
+    .detail_image {
+         width: 800px;
+    }
+    .detail_image img {
+        width: 500px;
+        height: auto;
+        float: left;
+        display: flex;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .detail_info {
+        margin: auto;
+        padding: 2%;
+    }
+
+    .detail_info a{
+        font-size: .9em;
+    }
+
+    .detail_card {
+
+        display: flex;
+    }
+
+    .blog_detail_image img {
+      width: 70%;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+}
+
+    /* Tablet Viewport: Style rules for newsletter */
+    .newsletter form {
+        max-width: 600px;
+    }
+
+    /* Tablet Viewport: Style rules for footer */
+    footer {
+        text-align: left;
+        overflow: auto;
+    }
+
+    .copyright {
+        float: left;
+        width: 65%;
+    }
+
+    .social {
+        float: right;
+        width: 20%;
+    }
+
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+
+    /* Desktop Viewport: Style rules for nav area */
+    nav {
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+        max-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #shred-logo img {
+        height: 120px;
+        width: auto;
+    }
+
+    .navbar-brand {
+        width: 30%;
+    }
+
+    nav ul {
+        text-align: right;
+        margin-bottom: 1%;
+        padding-right: 3%;
+    }
+
+    nav li {
+        border: none;
+        font-size: 1.5em;
+
+    }
+
+    nav li a .onpage {
+        color: #EB9A3A;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+    }
+
+    nav li:last-child {
+        padding-right: 0%;
+    }
+
+    nav li a:hover {
+        color: #363457;
+        transform: skew(30deg, 0deg);
+    }
+
+    nav li:hover {
+        background-color: #DBFD87;
+        transform: scale(1.3);
+        transform: skew(10, 10);
+        transform: skew(-30deg, 0deg);
+    }
+
+    /* Desktop: Style Rules for Hero Text*/
+    header {
+        padding-bottom: 2%;
+    }
+
+    /* Style Rules for Hero Text */
+    .hero-text {
+        position: relative;
+        height: 50%;
+        text-align: left;
+        position: absolute;
+        top: 55%;
+        left: 200px;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    .hero-text h1 {
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+        font-size: 3em;
+        outline: none;
+        text-transform: none;
+    }
+    /* Desktop Viewport: Style Rules for Contact Page */
+
+        input, textarea {
+        padding: 6px;
+        max-width: 100%
+        text-align: left;
+        }
+
+}

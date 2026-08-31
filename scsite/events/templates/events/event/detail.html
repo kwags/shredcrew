@@ -1,0 +1,54 @@
+{% extends "website/base.html" %}
+{% block title %}{{ event.title }}{% endblock %}
+{% block content %}
+
+    <!--Event Tags -->
+    {% if tag %}
+        <div class="tags">
+            <h2>{{ tag.name }} Events</h2>
+            <a href="{% url 'events' %}">Back to All Events</a>
+        /div>
+    {% endif %}
+
+    <div class="detail_card">
+        <!--Event Image -->
+        {% if event.event_image %}
+            <div class="detail_image">
+                <img src = "{{ event.event_image.url }}" width="300" alt="mountain biker" class="event_detail_image">
+            </div>
+        {% endif %}
+
+        <!--Event Details -->
+        <div class="detail_info">
+          <h1>{{ event.title }}</h1>
+          <h2> {{ event.date|date:"l" }}, {{ event.date }}</h2>
+          <p><b>Start Time: </b>{{ event.start_time }}</p>
+          <p><b>End Time: </b>{{ event.end_time }}</p>
+          <p><b>Location: </b> <a href="{{ event.location.directions }}" target="_blank"> {{ event.location }}</a></p>
+          <p><b>Price: </b>${{ event.price }}</p>
+        </div>
+    </div>
+
+    <!--Event Description -->
+    <div class="detail_description">
+        <p><b>Event Description: </b>{{ event.description }}</p><br>
+
+        <!--Event Tags -->
+        <p class="tag_list"><b>Tags: </b>{% for tag in event.tags.all %}<a href="{% url "events:event_list_by_tag" tag.slug %}"> {{ tag.name }}</a>
+            {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </p><br>
+    </div>
+
+    <div class="other_detail">
+        <a href="{% url 'events' %}">View All Events</a><br><br>
+        <div class="similar_events">
+            <h2>Similar Events</h2>
+            {% for event in similar_events %}
+                <p><a href="{{ event.get_absolute_url }}">{{ event.title }}</a></p>
+                {% empty %}
+                <p>There are no similar events yet.</p>
+            {% endfor %}
+    </div>
+
+{% endblock %}

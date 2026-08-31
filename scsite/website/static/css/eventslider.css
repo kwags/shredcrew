@@ -1,0 +1,90 @@
+event-slider {
+    position: relative;
+}
+.body-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.slide-container {
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+
+.card {
+    border-radius: 3px;
+    background-color: #F4F3EF;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(.97);
+        background-color: rgba(219,253,135,.5);
+
+}
+
+.image-content, .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 3px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 0px;
+}
+
+.card-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+    object-position: center;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.event-date, .location, .description {
+    padding-top: 2%;
+}
+.name {
+    font-size: 1.75em;
+    line-height: 1em;
+}
+
+.viewevent-btn {
+    padding: 8px 16px;
+}
+
+.swiper-nav-btn:hover {
+    color: #DBFD87;
+    transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+    .swiper-nav-btn {
+        display: none;
+    }
+}

@@ -1,0 +1,7 @@
+
+    {% for event in latest_events %}
+        <h3> <a href="{{ event.get_absolute_url }}">{{ event.title }}</a></h3>
+        <p>Location: <a href="{{ event.get_absolute_url }}">{{ event.location }}</a></p>
+        <p><a href="{{ event.get_absolute_url }}">{{ event.description|truncatewords:30}}</a></p>
+
+  {% endfor %}

@@ -1,0 +1,27 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% load events_tags %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+  <div class="contact">
+    <h1>Contact Us</h1>
+    <h2>Fill out this form to drop us a line!</h2><br>
+
+    <form method="post">
+      {{ form.as_p }}<br>
+      <p class="contact_form"><input type="submit" value="Send it!"></p>
+      {% csrf_token %}
+    </form>
+  </div>
+
+  <div class="upcoming_events">
+    <a href="{% url 'events' %}"> <h2>Upcoming Events</h2></a>
+      <div class="event-slider">
+      {% show_events_slider 10 %}
+      </div>
+    <a href="{% url 'events' %}"> <p class="center-text">View All Events</p></a>
+  </div>
+
+{% endblock %}

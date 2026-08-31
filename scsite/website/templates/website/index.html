@@ -1,0 +1,57 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% load blog_tags %}
+{% load events_tags %}
+
+{% block title %} Shred Crew MTB {% endblock %}
+
+{% block content %}
+    <!-- Hero Image -->
+    <div class="hero-img">
+        <div class="hero-text">
+            <h1 class="h-text">Let's Shred,<br>Crew!</h1>
+            <a href="{% url 'events' %}"><button class="hero-btn">Events</button></a>
+        </div>
+        <img src="{% static 'images/hero-home.png' %}" alt="Mountain Biker in the Forest with teal jacket">
+    </div>
+
+    <!-- Content -->
+    <div id="container">
+        <div class="offwhite-bg">
+          <h1>About Us</h1>
+            <p>Welcome to the Shred Crew! We are passionate about bringing mountain bike riders together to build community and helping mountain bikers to transform their ride. We offer skills clinics (Shred School) and group rides (Shred Rides) for all skill levels of riders from your first time on a mountain bike to the experienced shredder.  We will empower you to tackle the roughest terrain with confidence and skill. In between rides and clinics, check out our blog for some skills information.
+            </p><br>
+            <p class="tablet-desktop">
+            Shred Crew skills clinics, also known as our Shred School, are all about transforming your ride to the next level. We’ll help you push your limits in a safe learning environment where you’ll receive coaching from BICP-certified mountain bike coaches. We offer many different skills clinics from beginner foundational skills to advanced jump clinics, there will be something every rider can learn from and ride away with more skills to shred the trails.
+            </p><br>
+            <p class="tablet-desktop">
+            Our weekly Shred Rides, are mountain bike group rides that offer something for everyone in the Minneapolis metro area from beginner green trails to an experience ride down rocky terrain and over gap jumps. Each week, we meet at the trailhead and split into three groups (beginner, intermediate, and advanced). Each group will ride the trails appropriate for their skill level lead by one of our BICP-certified mountain bike coaches. Our group rides help build camaraderie and skills on the trail to improve confidence and community. And we’ll probably all grab some tacos or beer afterward!
+            </p>
+            <h3>
+            Are you ready to shred? Let’s Shred, Crew!
+            </h3>
+        </div>
+
+        <!-- Upcoming Events Slider -->
+        <div class="upcoming_events">
+            <a href="{% url 'events' %}"> <h2>Upcoming Events</h2></a>
+            <div class="event-slider">
+                {% show_events_slider 10 %}
+            </div>
+            <a href="{% url 'events' %}"> <p class="center-text">View All Events</p></a>
+        </div>
+
+        <!-- Latest Blog Post -->
+        <a href="{% url 'blog' %}"> <h2 class="latest_blog">Latest Blog Post</h2></a>
+                <div class="latest_post">
+                    {% show_latest_posts 1 %}
+                    {% for m in post %}
+                    {% endfor %}
+                </div>
+
+        <br><a href="{% url 'blog' %}"> <p class="center-text">View All Posts</p></a>
+
+    </div>
+
+{% endblock %}
+
