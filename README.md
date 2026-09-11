@@ -1,72 +1,45 @@
 # Shred Crew Website
 
-**Shred Crew** is a custom mountain biking website designed and developed to provide an engaging, user-focused experience for the mountain biking community. The project combines custom branding and UI/UX design with a Django-powered website and newsletter subscription system.
+**Shred Crew** is a custom mountain biking website built with Django, featuring dynamic pages, a newsletter subscription system, database integration, and a Django admin interface for managing subscribers.
 
-I was responsible for the entire project from concept through implementation including branding, UI/UX design, front-end development, and back-end development.
+The project was developed from concept through implementation, including the website's logo, branding, UI/UX, front-end development, and Django back-end functionality.
+
+<img width="1400" height="852" alt="sc-home" src="https://github.com/user-attachments/assets/855051e6-4c3e-4a31-8dea-1a6d00199990" />
 
 ## Features
 
-* Custom logo and visual branding
-* Custom color palette and typography
-* Responsive UI/UX design
-* Mountain biking-focused content and imagery
-* Dynamic website pages
-* Newsletter subscription form
-* Subscriber data stored in a Django database
+* Dynamic mountain biking website
+* Newsletter subscription system
+* Subscriber data stored in a SQLite database
 * Django admin interface for managing subscribers
-* Success messaging for newsletter signups
+* Form validation and signup success messaging
+* Custom website navigation and page layouts
+* Custom branding, typography, and visual styling
+* Mountain biking-focused content and imagery
 
-## My Contributions
-
-I was responsible for all aspects of the project, including:
-
-* Logo design and branding
-* Color palette and visual identity
-* UI/UX design
-* Website design, layout, and navigation
-* Front-end development and CSS styling
-* Responsive design
-* Django project and application structure
-* Newsletter subscription functionality
-* Subscriber database model and form
-* Django admin configuration for managing subscribers
+<img width="1000" height="536" alt="sc-eventsslider" src="https://github.com/user-attachments/assets/3dedfccc-36c1-489e-9a38-bbf1ef1a8773" />
 
 ## Technologies Used
 
 * **Python**
 * **Django**
+* **SQLite**
 * **HTML5**
 * **CSS3**
 * **JavaScript**
-* **SQLite**
 
 ## Django Functionality
 
-The website uses Django to handle dynamic content and newsletter subscriptions.
+The website uses Django to handle the application's dynamic functionality and newsletter subscription system.
 
-A custom `Subscriber` model stores subscriber email addresses and signup dates. A Django `ModelForm` handles newsletter registration, while the Django admin interface provides tools to search, filter, sort, and manage subscriber records.
+A custom `Subscriber` model stores subscriber email addresses and signup dates. A Django `ModelForm` handles newsletter registration and validation, while the Django admin interface provides tools to search, filter, sort, and manage subscriber records.
 
-## Project Structure
+The newsletter signup flow connects the front-end form to the Django application, saves validated subscriber information to the SQLite database, and provides feedback to the user after a successful submission.
 
-```text
-├── scsite/
-│   ├── settings.py
-│   ├── urls.py
-│   └── ...
-├── website/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── views.py
-│   └── ...
-├── templates/
-├── static/
-├── manage.py
-├── requirements.txt
-└── .gitignore
-```
+## Front-End Development
 
-## Project Background
+The front end was developed with HTML, CSS, and JavaScript and integrated with the Django application.
 
-This project demonstrates my ability to take a website from initial concept and visual identity through full-stack implementation, combining graphic design, UI/UX, responsive front-end development, Django back-end development, database integration, and administrative functionality.
+## Website Design
+
+The website layout and UI/UX was designed in Figma. The logo was designed in Adobe Illustrator.
