@@ -9,7 +9,7 @@ The project was developed from concept through implementation, including the web
 
 ## Features
 
-* Dynamic mountain biking website
+* Dynamic mountain biking web application
 * Newsletter subscription system
 * Subscriber data stored in a SQLite database
 * Django admin interface for managing subscribers
