@@ -1,6 +1,7 @@
-# Shred Crew Website
+# Shred Crew Web Application
 
-**Shred Crew** is a custom mountain biking website built with Python and Django, featuring dynamic pages, a newsletter subscription system, database integration, and a Django admin interface for managing subscribers.
+
+**Shred Crew** is a custom mountain biking web application built with Python, Django and JavaScript. It features dynamic pages, a newsletter subscription system, database integration, and a Django admin interface for managing subscribers.
 
 The project was developed from concept through implementation, including the website's logo, branding, UI/UX, front-end development, and Django back-end functionality.
 
@@ -36,9 +37,14 @@ A custom `Subscriber` model stores subscriber email addresses and signup dates. 
 
 The newsletter signup flow connects the front-end form to the Django application, saves validated subscriber information to the SQLite database, and provides feedback to the user after a successful submission.
 
+<img width="1000" alt="blog and subscribe" src="https://github.com/user-attachments/assets/cf24108a-2944-47d1-9811-61d3cc9f1d64" />
+
+
+<img width="1000" alt="Django Admin" src="https://github.com/user-attachments/assets/702200f1-5535-48a4-af08-648fa0026995" />
+
 ## Front-End Development
 
-The front end was developed with HTML, CSS, and JavaScript and integrated with the Django application.
+The front end was developed with HTML, CSS, and JavaScript and integrated with the Python/Django application.
 
 ## Website Design
 
