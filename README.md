@@ -31,7 +31,7 @@ The project was developed from concept through implementation, including the web
 
 ## Django Functionality
 
-The website uses Django to handle the application's dynamic functionality and newsletter subscription system.
+The web application uses Django to handle the application's dynamic functionality and newsletter subscription system.
 
 A custom `Subscriber` model stores subscriber email addresses and signup dates. A Django `ModelForm` handles newsletter registration and validation, while the Django admin interface provides tools to search, filter, sort, and manage subscriber records.
 
